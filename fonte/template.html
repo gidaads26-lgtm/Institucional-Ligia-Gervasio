@@ -190,6 +190,14 @@ section{scroll-margin-top:calc(var(--topo) + 8px)}
 .cartao p{margin:0}
 .tecnica{display:block;font-size:.92rem;font-weight:600;color:var(--azul);margin:.35rem 0 1rem;line-height:1.45}
 
+/* ---------- Causas ---------- */
+.causas-grade{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
+.causa{position:relative;padding-top:1.5rem;border-top:1px solid var(--linha)}
+.causa::before{content:"";position:absolute;left:0;top:-1px;width:3rem;height:2px;background:var(--azul)}
+.causa h3{font-size:1.45rem;margin-bottom:.6rem}
+.causa p{margin:0}
+.aviso-legal{margin:1.5rem 0 0;font-size:.9rem;color:var(--suave);max-width:46rem}
+
 /* ---------- Método ---------- */
 .cabeca{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 4rem;align-items:end;margin-bottom:3rem}
 .cabeca .intro{margin:0}
@@ -328,6 +336,7 @@ section{scroll-margin-top:calc(var(--topo) + 8px)}
   .pilar > :not(.marca-pilar){grid-column:2}
 }
 @media (max-width:860px){
+  .causas-grade{grid-template-columns:1fr;gap:2rem}
   .antes .wrap,.cabeca,.local-grade,.sobre-grade,.duvidas-grade{grid-template-columns:1fr}
   .cabeca{gap:1rem;margin-bottom:2.25rem}
   .sobre-foto{max-width:360px}
@@ -444,49 +453,72 @@ section{scroll-margin-top:calc(var(--topo) + 8px)}
   <svg class="aneis" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="50"/><circle cx="200" cy="200" r="90"/><circle cx="200" cy="200" r="130"/><circle cx="200" cy="200" r="170"/><circle cx="200" cy="200" r="199"/></svg>
   <div class="wrap">
     <div>
-      <h2 class="dupla" id="titulo-antes">Alguma destas frases parece sua?</h2>
+      <h2 class="dupla" id="titulo-antes">Você se reconhece em alguma destas situações?</h2>
       <ul class="frases">
-        <li class="rv" style="--i:0">“Meu coração dispara do nada e eu acho que vou morrer.”</li>
-        <li class="rv" style="--i:1">“Deixo de ir a lugares só de imaginar que posso passar mal.”</li>
-        <li class="rv" style="--i:2">“Sei que esse medo não faz sentido, mas ele é mais forte que eu.”</li>
-        <li class="rv" style="--i:3">“Confiro a porta, o gás, a mensagem, e a dúvida volta mesmo assim.”</li>
-        <li class="rv" style="--i:4">“Minha cabeça antecipa tudo o que pode dar errado, o dia inteiro.”</li>
+        <li class="rv" style="--i:0">Sente o coração disparar sem motivo e acha que algo grave vai acontecer.</li>
+        <li class="rv" style="--i:1">Deixa de sair, dirigir ou viajar por medo de passar mal.</li>
+        <li class="rv" style="--i:2">Sabe que o medo é exagerado, mas não consegue controlá-lo.</li>
+        <li class="rv" style="--i:3">Confere a mesma coisa várias vezes e a dúvida continua.</li>
+        <li class="rv" style="--i:4">Passa o dia antecipando tudo o que pode dar errado.</li>
       </ul>
     </div>
     <div class="antes-texto">
-      <p class="destaque rv">Se você se reconheceu em alguma delas, isso não é fraqueza. É uma reação de medo que continua ativa mesmo quando não existe perigo real.</p>
-      <p class="apoio rv">Ansiedade, pânico, fobias e TOC costumam ter origem em experiências que deixaram o corpo em alerta. Tentar controlar na força costuma cansar ainda mais, porque essa reação acontece antes de qualquer decisão consciente.</p>
-      <p class="apoio rv">Na hipnose clínica, trabalhamos essa origem e as emoções ligadas a ela. O processo pode acontecer junto com o acompanhamento médico ou psicológico que você já faz.</p>
+      <p class="destaque rv">Se você se reconheceu em alguma delas, isso não é fraqueza nem falta de força de vontade. É o seu corpo reagindo como se estivesse em perigo, mesmo quando não está.</p>
+      <p class="apoio rv">Essa reação tem causa, e a causa pode ser tratada. É por ela que a hipnose clínica começa.</p>
       <a class="btn btn--claro rv" data-wa="agendar" href="{{WA_AGENDAR}}" target="_blank" rel="noopener">{{ICO_WA}}Agendar minha avaliação</a>
     </div>
   </div>
 </section>
 
-<!-- 3. Método -->
-<section class="secao" id="metodo" aria-labelledby="titulo-metodo">
+<!-- 2b. Por que o medo cresce -->
+<section class="secao causas" id="causas" aria-labelledby="titulo-causas">
   <div class="wrap">
     <div class="cabeca">
-      <h2 class="dupla" id="titulo-metodo">Como a hipnose clínica trabalha o seu medo</h2>
-      <p class="intro rv">Uso a hipnose clínica para voltar ao momento em que o medo aprendeu a exagerar, e mais duas ferramentas para soltar o que ficou acumulado pelo caminho.</p>
+      <h2 class="dupla" id="titulo-causas">Por que o medo fica maior do que o perigo</h2>
+      <p class="intro rv">Ansiedade, pânico, fobias e TOC raramente surgem do nada. Na maioria das vezes, existe uma causa emocional por trás, e ela pode ser trabalhada em terapia.</p>
+    </div>
+    <div class="causas-grade">
+      <article class="causa rv" style="--i:0">
+        <h3>Experiências que marcaram</h3>
+        <p>Um susto, uma perda ou uma fase difícil podem fazer o corpo associar certas situações a perigo. A partir daí, ele reage do mesmo jeito sempre que algo parecido acontece.</p>
+      </article>
+      <article class="causa rv" style="--i:1">
+        <h3>Emoções sem resolução</h3>
+        <p>Mágoa, culpa e medo que nunca foram resolvidos continuam ativos. Eles mantêm a ansiedade alta, mesmo quando a vida já mudou.</p>
+      </article>
+      <article class="causa rv" style="--i:2">
+        <h3>Medo real e medo percebido</h3>
+        <p>O corpo reage da mesma forma a uma ameaça real e a uma ameaça imaginada. Na ansiedade, essa reação aparece sem perigo de verdade e passa a limitar a sua rotina.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Método -->
+<section class="secao" id="metodo" aria-labelledby="titulo-metodo" style="padding-top:0">
+  <div class="wrap">
+    <div class="cabeca">
+      <h2 class="dupla" id="titulo-metodo">O que trabalhamos na hipnose clínica</h2>
+      <p class="intro rv">Três frentes que se completam: encontrar a causa do medo, liberar o que ficou guardado e fazer as pazes com o que aconteceu.</p>
     </div>
     <div class="grade-3 carrossel" data-carrossel="metodo">
       <article class="cartao pilar rv" style="--i:0">
         <svg class="marca-pilar" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="18" cy="22" r="12"/><circle cx="26" cy="22" r="12" stroke-opacity=".45"/></svg>
         <h3>Separar o real do percebido</h3>
         <span class="tecnica">Hipnose clínica com busca dos eventos desencadeadores</span>
-        <p>O corpo reage do mesmo jeito a um perigo real e a um perigo imaginado. Em hipnose, voltamos ao momento em que esse alarme foi aprendido, mesmo que ele pareça não ter ligação com o problema de hoje.</p>
+        <p>Em hipnose, encontramos as situações em que o medo começou, mesmo as que parecem não ter ligação com o problema de hoje, para que o corpo deixe de reagir a elas como perigo.</p>
       </article>
       <article class="cartao pilar rv" style="--i:1">
         <svg class="marca-pilar" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="22" cy="22" r="5"/><circle cx="22" cy="22" r="11" stroke-opacity=".7"/><circle cx="22" cy="22" r="18" stroke-opacity=".4"/></svg>
         <h3>Soltar o que ficou guardado</h3>
         <span class="tecnica">Técnica de liberação emocional</span>
-        <p>Algumas emoções ficam presas por anos e pesam no corpo. Essa técnica ajuda a descarregar esse peso, aos poucos e com segurança.</p>
+        <p>Liberar emoções que ficaram presas por anos e que ainda pesam no corpo e no dia a dia.</p>
       </article>
       <article class="cartao pilar rv" style="--i:2">
         <svg class="marca-pilar" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="22" cy="22" r="12"/><circle cx="22" cy="22" r="17" stroke-opacity=".45"/></svg>
         <h3>Fazer as pazes com a própria história</h3>
         <span class="tecnica">Trabalho de perdão e autoperdão</span>
-        <p>Perdoar não tem a ver com merecimento nem com justiça. É escolher se desligar da dor, inclusive da culpa que você carrega por si.</p>
+        <p>Se desligar da mágoa e da culpa ligadas ao que aconteceu. Perdoar, aqui, não tem a ver com merecimento nem com justiça: é uma escolha a seu favor.</p>
       </article>
     </div>
     <div class="pontos" role="group" data-pontos="metodo" aria-label="Escolher pilar do método"></div>
@@ -511,8 +543,8 @@ section{scroll-margin-top:calc(var(--topo) + 8px)}
 <section class="secao" id="atendimentos" aria-labelledby="titulo-atend">
   <div class="wrap">
     <div class="cabeca">
-      <h2 class="dupla" id="titulo-atend">Quando o medo começa a decidir por você</h2>
-      <p class="intro rv">Atendo adultos que convivem com estes quadros, no consultório e online.</p>
+      <h2 class="dupla" id="titulo-atend">Para quem são os atendimentos</h2>
+      <p class="intro rv">Atendo adultos, no consultório e online, que convivem com:</p>
     </div>
     <div class="grade-2 carrossel" data-carrossel="temas">
       <article class="cartao tema rv" style="--i:0">
@@ -540,40 +572,40 @@ section{scroll-margin-top:calc(var(--topo) + 8px)}
 <section class="secao" id="como" aria-labelledby="titulo-como" style="padding-top:0">
   <div class="wrap">
     <div class="cabeca">
-      <h2 class="dupla" id="titulo-como">Do primeiro contato ao acompanhamento</h2>
-      <p class="intro rv">São quatro etapas, no seu ritmo, e você sabe desde o início o que acontece em cada uma.</p>
+      <h2 class="dupla" id="titulo-como">Como funciona a terapia, passo a passo</h2>
+      <p class="intro rv">Do primeiro contato ao acompanhamento, você sabe o que acontece em cada etapa.</p>
     </div>
     <ol class="passos" id="passos">
       <li class="passo rv" style="--i:0">
         <span class="num" aria-hidden="true">1</span>
-        <h3>Avaliação</h3>
-        <p>Primeira consulta, de 1h a 1h30. Você conta a sua história, eu explico como o seu medo está funcionando e, no final, aplico uma técnica de liberação emocional.</p>
+        <h3>Consulta de avaliação</h3>
+        <p>De 1h a 1h30. Você conta o que está vivendo, eu explico como o seu medo funciona e, no final, aplico uma técnica de liberação emocional.</p>
         <p class="nota">Muitas pessoas relatam melhora já nesse primeiro encontro. Cada história tem o seu tempo.</p>
       </li>
       <li class="passo rv" style="--i:1">
         <span class="num" aria-hidden="true">2</span>
-        <h3>Plano</h3>
-        <p>Com base no que apareceu na avaliação, definimos os temas a trabalhar e uma estimativa de sessões, revista ao longo do caminho.</p>
+        <h3>Plano para o seu caso</h3>
+        <p>Com base na avaliação, definimos o que trabalhar e uma estimativa de sessões, revista a cada etapa.</p>
       </li>
       <li class="passo rv" style="--i:2">
         <span class="num" aria-hidden="true">3</span>
-        <h3>Processo</h3>
-        <p>Nas sessões de hipnose, buscamos os eventos que deram origem ao medo e trabalhamos a liberação das emoções, o perdão e o autoperdão.</p>
+        <h3>Sessões de hipnose clínica</h3>
+        <p>Em cada sessão, trabalhamos as situações que deram origem ao medo, a liberação das emoções, o perdão e o autoperdão.</p>
       </li>
       <li class="passo rv" style="--i:3">
         <span class="num" aria-hidden="true">4</span>
         <h3>Acompanhamento</h3>
-        <p>Acompanho como o seu dia a dia responde: o que voltou a ser possível, o que ainda pesa e o que vale ajustar.</p>
+        <p>Acompanho as mudanças no seu dia a dia e ajusto o processo sempre que for preciso.</p>
       </li>
     </ol>
-    <a class="btn rv" data-wa="agendar" href="{{WA_AGENDAR}}" target="_blank" rel="noopener">{{ICO_WA}}Agendar minha avaliação</a>
+    <a class="btn rv" data-wa="agendar" href="{{WA_AGENDAR}}" target="_blank" rel="noopener">{{ICO_WA}}Quero agendar minha consulta</a>
   </div>
 </section>
 
 <!-- 7. Local -->
 <section class="secao" id="local" aria-labelledby="titulo-local" style="padding-top:0">
   <div class="wrap">
-    <h2 class="dupla" id="titulo-local">Em {{CIDADE_UF}} ou de onde você estiver</h2>
+    <h2 class="dupla" id="titulo-local">Consultório em {{CIDADE_UF}} e atendimento online</h2>
     <div class="local-grade">
       {{LOCAL_VISUAL}}
       <div class="local-cartoes">
@@ -605,11 +637,12 @@ section{scroll-margin-top:calc(var(--topo) + 8px)}
       <h2 class="dupla" id="titulo-sobre">{{NOME_COMPLETO}}</h2>
       <p class="frase-dela rv">“Cada emoção compreendida é um passo para a liberdade.”</p>
       <p class="rv">Cuidar de pessoas me acompanha desde os 17 anos, quando decidi ser farmacêutica. Me especializei em manipulação, homeopatia e cosmetologia e passei 32 anos atendendo no balcão, ouvindo de perto o que cada pessoa sentia.</p>
-      <p class="rv">Foi ali que percebi que existiam outros caminhos de cuidado, também eficazes. Hoje sou terapeuta integrativa e {{PROFISSAO_MINUSCULA}}, e atendo adultos com ansiedade, pânico, fobias e TOC, no consultório em {{CIDADE_UF}} e online.</p>
+      <p class="rv">Foi ali que percebi que existiam outros caminhos de cuidado, também eficazes. Hoje sou terapeuta integrativa e {{PROFISSAO_MINUSCULA}}, especialista em ansiedade, pânico, fobias e TOC. Atendo adultos no consultório em {{CIDADE_UF}} e online.</p>
+      <p class="rv">Sou casada, mãe de três e avó de dois. Meu trabalho é complementar ao acompanhamento médico e psicológico, nunca um substituto.</p>
       {{FORMACAO}}
       <div class="acoes rv">
-        <a class="btn" data-wa="agendar" href="{{WA_AGENDAR}}" target="_blank" rel="noopener">{{ICO_WA}}Agendar avaliação</a>
-        <a class="btn btn--linha" data-ig href="{{INSTAGRAM_URL}}" target="_blank" rel="noopener">{{ICO_IG}}Ver o Instagram</a>
+        <a class="btn" data-wa="agendar" href="{{WA_AGENDAR}}" target="_blank" rel="noopener">{{ICO_WA}}Agendar minha consulta</a>
+        <a class="btn btn--linha" data-ig href="{{INSTAGRAM_URL}}" target="_blank" rel="noopener">{{ICO_IG}}Seguir no Instagram</a>
       </div>
     </div>
   </div>
@@ -619,37 +652,37 @@ section{scroll-margin-top:calc(var(--topo) + 8px)}
 <section class="secao" id="duvidas" aria-labelledby="titulo-duvidas" style="padding-top:0">
   <div class="wrap duvidas-grade">
     <div>
-      <h2 class="dupla" id="titulo-duvidas">O que as pessoas mais perguntam sobre a hipnose</h2>
+      <h2 class="dupla" id="titulo-duvidas">Dúvidas comuns antes de começar</h2>
       <div class="caixa rv">
-        <h3>Ficou alguma pergunta sem resposta?</h3>
+        <h3>Ficou alguma dúvida?</h3>
         <p>Me mande sua dúvida pelo WhatsApp e eu respondo pessoalmente.</p>
-        <a class="btn btn--claro" data-wa="duvida" href="{{WA_DUVIDA}}" target="_blank" rel="noopener">{{ICO_WA}}Enviar minha dúvida</a>
+        <a class="btn btn--claro" data-wa="duvida" href="{{WA_DUVIDA}}" target="_blank" rel="noopener">{{ICO_WA}}Perguntar no WhatsApp</a>
       </div>
     </div>
     <div class="faq">
       <details class="rv" style="--i:0">
-        <summary>Vou perder o controle durante a hipnose?<span class="mais" aria-hidden="true"></span></summary>
-        <div class="resp"><p>Não. Você continua consciente, ouve tudo o que acontece e pode interromper a sessão quando quiser. A hipnose clínica é um estado de atenção concentrada, parecido com aquele momento em que a gente se distrai olhando a estrada numa viagem. Ninguém revela nada contra a própria vontade, e tudo o que é dito fica em sigilo.</p></div>
+        <summary>A hipnose faz eu perder o controle?<span class="mais" aria-hidden="true"></span></summary>
+        <div class="resp"><p>Não. Durante a sessão você fica consciente, ouve tudo e pode interromper quando quiser. A hipnose clínica é um estado de atenção concentrada e relaxamento. Ninguém revela nada contra a própria vontade, e tudo o que é dito fica em sigilo.</p></div>
       </details>
       <details class="rv" style="--i:1">
-        <summary>Como é a primeira consulta?<span class="mais" aria-hidden="true"></span></summary>
-        <div class="resp"><p>Ela dura de 1h a 1h30. Você me conta o que está vivendo, eu explico como o seu medo está funcionando e, no final, aplico uma técnica de liberação emocional. Não é preciso preparar nada antes.</p></div>
+        <summary>Quantas sessões eu vou precisar?<span class="mais" aria-hidden="true"></span></summary>
+        <div class="resp"><p>Depende da sua história e do que aparecer ao longo do processo. Depois da consulta de avaliação, eu passo uma estimativa, que é revista a cada etapa.</p></div>
       </details>
       <details class="rv" style="--i:2">
-        <summary>Quantas sessões vou precisar?<span class="mais" aria-hidden="true"></span></summary>
-        <div class="resp"><p>Depende da sua história e do que aparecer ao longo do processo. Depois da avaliação, eu passo uma estimativa, que é revista a cada etapa. Prefiro ser honesta a prometer um número.</p></div>
+        <summary>Onde acontece o atendimento?<span class="mais" aria-hidden="true"></span></summary>
+        <div class="resp"><p>No consultório em {{CIDADE_UF}} ou online, por videochamada. No online, você precisa de um lugar reservado, internet estável e fones de ouvido. A condução é a mesma do presencial.</p></div>
       </details>
       <details class="rv" style="--i:3">
-        <summary>O atendimento online funciona?<span class="mais" aria-hidden="true"></span></summary>
-        <div class="resp"><p>Funciona, e segue a mesma condução do presencial. Você só precisa de um lugar reservado, onde ninguém vá interromper, internet estável e fones de ouvido. Assim dá para atender pessoas de qualquer cidade.</p></div>
+        <summary>A hipnose cura ansiedade, pânico, fobias ou TOC?<span class="mais" aria-hidden="true"></span></summary>
+        <div class="resp"><p>A hipnoterapia não promete cura. Ela trabalha as causas emocionais desses quadros e pode aliviar bastante os sintomas. É um cuidado complementar e não substitui acompanhamento médico, psiquiátrico ou psicológico. Se você toma medicação, nunca interrompa nem mude a dose sem orientação de quem a receitou.</p></div>
       </details>
       <details class="rv" style="--i:4">
-        <summary>A hipnoterapia substitui o psiquiatra, o psicólogo ou os remédios?<span class="mais" aria-hidden="true"></span></summary>
-        <div class="resp"><p>Não. A hipnoterapia é complementar e não substitui acompanhamento médico, psiquiátrico ou psicológico. Se você toma medicação, não interrompa nem mude a dose sem orientação de quem a receitou. Os dois cuidados podem caminhar juntos.</p></div>
+        <summary>A primeira consulta já é o tratamento completo?<span class="mais" aria-hidden="true"></span></summary>
+        <div class="resp"><p>Não. A primeira consulta, de 1h a 1h30, é a avaliação: você conta o que está vivendo, entende como o seu medo funciona e já passa por uma técnica de liberação emocional. O tratamento continua nas sessões seguintes.</p></div>
       </details>
       <details class="rv" style="--i:5">
-        <summary>Por que falar de perdão se o meu problema é ansiedade?<span class="mais" aria-hidden="true"></span></summary>
-        <div class="resp"><p>Porque mágoa e culpa costumam estar presas aos mesmos momentos em que o medo começou. No trabalho de perdão, você escolhe se desligar dessa dor, inclusive da cobrança que faz a si. Quando esse peso sai, o medo tende a perder força.</p></div>
+        <summary>Em quanto tempo eu percebo alguma mudança?<span class="mais" aria-hidden="true"></span></summary>
+        <div class="resp"><p>Cada pessoa tem o seu tempo. Muitas relatam alívio já nas primeiras sessões, mas isso varia com a história e com a intensidade dos sintomas. No acompanhamento, avaliamos o que mudou.</p></div>
       </details>
     </div>
   </div>
@@ -659,10 +692,10 @@ section{scroll-margin-top:calc(var(--topo) + 8px)}
 <section class="painel escuro final" id="final" aria-labelledby="titulo-final">
   <svg class="aneis" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="40"/><circle cx="200" cy="200" r="80"/><circle cx="200" cy="200" r="120"/><circle cx="200" cy="200" r="160"/><circle cx="200" cy="200" r="199"/></svg>
   <div class="wrap">
-    <h2 class="dupla" id="titulo-final">Seu medo tem uma história. <span class="acento">Vamos conhecê-la?</span></h2>
-    <p class="rv">Na consulta de avaliação, você conta o que está vivendo, entende de onde o medo pode ter vindo e já passa por uma técnica de liberação emocional. Presencial em {{CIDADE_UF}} ou online.</p>
+    <h2 class="dupla" id="titulo-final">Cuide da origem do seu medo e <span class="acento">volte a viver com mais calma</span></h2>
+    <p class="rv">Comece pela consulta de avaliação. Nela você entende de onde o seu medo pode ter vindo e já passa por uma técnica de liberação emocional. Presencial em {{CIDADE_UF}} ou online.</p>
     <div class="acoes rv">
-      <a class="btn btn--claro" data-wa="agendar" href="{{WA_AGENDAR}}" target="_blank" rel="noopener">{{ICO_WA}}Agendar avaliação</a>
+      <a class="btn btn--claro" data-wa="agendar" href="{{WA_AGENDAR}}" target="_blank" rel="noopener">{{ICO_WA}}Agendar consulta</a>
       <a class="ico-btn" data-ig href="{{INSTAGRAM_URL}}" target="_blank" rel="noopener" aria-label="Instagram de {{NOME_SITE}}">{{ICO_IG}}</a>
     </div>
   </div>
@@ -683,6 +716,7 @@ section{scroll-margin-top:calc(var(--topo) + 8px)}
         <a class="ico-btn" data-wa="agendar" href="{{WA_AGENDAR}}" target="_blank" rel="noopener" aria-label="WhatsApp de {{NOME_SITE}}">{{ICO_WA}}</a>
       </div>
     </div>
+    <p class="aviso-legal">A hipnoterapia é um cuidado complementar e não substitui acompanhamento médico, psiquiátrico ou psicológico.</p>
     <div class="linha2">
       <span>© <span data-ano>2026</span>, Todos os direitos reservados</span>
       <a href="#inicio">Voltar ao topo</a>
